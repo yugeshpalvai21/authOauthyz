@@ -5,6 +5,7 @@
 
 import Rails from "@rails/ujs"
 import "bootstrap"
+import "@fortawesome/fontawesome-free/css/all"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
