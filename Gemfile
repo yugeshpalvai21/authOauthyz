@@ -30,3 +30,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.2'
 gem 'letter_opener', group: :development
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'

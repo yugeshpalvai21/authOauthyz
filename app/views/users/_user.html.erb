@@ -6,6 +6,8 @@
         <p>Last Sign In Time - <%= user.last_sign_in_at %></p>
         <p>Last Sign In IP - <%= user.last_sign_in_ip %></p>
         <p>Current Sign In IP - <%= user.current_sign_in_ip %></p>
+        <p>Current User Sign Up Through - <%= user.provider %></p>
+        <p>Current User UID - <%= user.uid %></p>
     </div>
     <div class="card-footer">
         Confirmed? : <span class="badge rounded-pill bg-primary"><%= user.confirmed? %></span>
