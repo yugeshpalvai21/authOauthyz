@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable, :trackable, :omniauthable,
          :recoverable, :rememberable, :validatable
+
+  include Roleable
   
   def self.from_omniauth(auth)
     user = where(email: auth.info.email).first_or_create do |user|
