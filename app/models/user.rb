@@ -5,11 +5,16 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   def self.from_omniauth(auth)
-    where(email: auth.info.email).first_or_create do |user|
+    user = where(email: auth.info.email).first_or_create do |user|
       user.password = Devise.friendly_token[0, 20]
       user.provider = auth.provider
       user.uid = auth.uid
       user.confirmed_at = Time.now
     end
+    unless user.confirmed?
+      user.confirmed_at = Time.now
+      user.save
+    end
+    user
   end
 end
