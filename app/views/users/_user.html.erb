@@ -1,11 +1,11 @@
 <div class="card">
     <div class="card-header">ID : <b><%= user.id %></b></div>
     <div class="card-body">
-        <p><%= link_to user.email, user_path(user) %></p>
-        <p><%= user.sign_in_count %></p>
-        <p><%= user.last_sign_in_at %></p>
-        <p><%= user.last_sign_in_ip %></p>
-        <p><%= user.current_sign_in_ip %></p>
+        <p>Email - <%= link_to user.email, user_path(user) %></p>
+        <p>Sign In Count - <%= user.sign_in_count %></p>
+        <p>Last Sign In Time - <%= user.last_sign_in_at %></p>
+        <p>Last Sign In IP - <%= user.last_sign_in_ip %></p>
+        <p>Current Sign In IP - <%= user.current_sign_in_ip %></p>
     </div>
     <div class="card-footer">
         Confirmed? : <span class="badge rounded-pill bg-primary"><%= user.confirmed? %></span>
