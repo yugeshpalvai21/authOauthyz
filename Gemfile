@@ -32,3 +32,4 @@ gem 'devise', '~> 4.2'
 gem 'letter_opener', group: :development
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
+gem 'devise_invitable', '~> 1.5', '>= 1.5.5'
