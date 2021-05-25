@@ -13,6 +13,9 @@
         Confirmed? : <span class="badge rounded-pill bg-primary"><%= user.confirmed? %></span>
     </div>
     <div class="card-footer">
-        USER ROLES - <%= user.roles %>
+        <% if user_signed_in? && current_user.super_admin? %>
+            <p><%= link_to "EDIT ROLES", edit_user_path(user) %></p>
+        <% end %>
+        USER ROLES - <%= display_roles(user.roles) %>
     </div>
 </div>

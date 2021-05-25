@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   include Roleable
+
+  after_create { self.update(regular_user: true) }
   
   def self.from_omniauth(auth)
     user = where(email: auth.info.email).first_or_create do |user|
