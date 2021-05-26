@@ -1,6 +1,7 @@
 <h1 class="text-center">All USers List Will Comes Here...</h1>
 <hr>
 <h2 class="text-center">Total User Count - <%= @users.count %></h2>
+<%= link_to "Invite User", new_user_invitation_path %>
 <hr>
 <div class="row">
     <% @users.each do |user| %>
